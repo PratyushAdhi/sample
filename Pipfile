@@ -7,6 +7,7 @@ verify_ssl = true
 
 [packages]
 drf-yasg = "*"
+dj-database-url = "*"
 
 [requires]
 python_version = "3.8"
