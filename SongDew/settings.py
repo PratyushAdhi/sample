@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_auth.registration',
     'rest_framework.authtoken',
+    'drf_yasg',
     'rest_auth',
     'Customer'
 ]
@@ -90,6 +91,15 @@ REST_FRAMEWORK = {
 
 SITE_ID = 1
 
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'api_key': {
+            'type': 'apiKey',
+            'in': 'header',
+            'name': 'Authorization'
+        }
+    },
+}
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
